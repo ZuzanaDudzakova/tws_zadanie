@@ -47,9 +47,18 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 
 
 ?>
-
+<style>
+  #regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+</style>
 <div class="container my-3" >
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="needs-validation" method="post">
+<form id="regForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="needs-validation" method="post">
   <div class="form-group my-3">
     <label for="login">Username:</label>
     <input type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" id="login" placeholder="Enter username" name="login" required>
@@ -71,25 +80,4 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
   </div>
   <button type="submit" class="btn btn-primary">Log in</button>
 </form>
-
-<script>
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-</script> 
 </div>

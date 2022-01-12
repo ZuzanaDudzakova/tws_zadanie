@@ -5,13 +5,13 @@ session_start();
 function showNav($choose)
 {
     $titles = array();
-    $titles['uvod'] = 'Domov';
-    $titles['drama'] = 'Dráma';
-    $titles['komedia'] = 'Komédia';
+    $titles['uvod'] = 'Home';
+    $titles['drama'] = 'Drama';
+    $titles['komedia'] = 'Comedy';
     $titles['shop'] = 'Shop';
 
     if (isset($_SESSION['user'])) {
-        $titles['kontakt'] = 'Kontakt';
+        $titles['kontakt'] = 'Contacts';
     }
 
     foreach ($titles as $id => $title) {

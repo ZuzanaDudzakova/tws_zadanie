@@ -15,5 +15,4 @@ include('navigation.php');
 showNav($show);
 include('prihlasenie.php');
 include('pages/' . $show . '.php');
-print_r($_SESSION);
 include('footer.php');

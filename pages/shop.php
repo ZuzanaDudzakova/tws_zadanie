@@ -15,7 +15,7 @@ function replace_char($str)
 ?>
 <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Predaj filmov | Shop</h1>
+        <h1 class="display-5 fw-bold">Movie sales | Shop</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus laborum consequuntur illum ipsam suscipit placeat?</p>
     </div>
 </div>
@@ -25,7 +25,7 @@ function replace_char($str)
         <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo '<div class="col"><div class="card mr-4" style="width: 20rem;">
+                echo '<div class="col"><div class="card mr-4 h-100" style="width: 20rem;">
                     <img src="' . $row['img'] . '" class="card-img-top" alt="' . $row['product'] . '">
                     <div class="card-body">
                         <h5 class="card-title">' . $row['product'] . '</h5>
