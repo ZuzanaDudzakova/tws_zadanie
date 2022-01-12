@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include('connect.php');
+include('config/connect.php');
 include('header.php');
 include('navigation.php');
 showNav("nic");
@@ -32,11 +32,10 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
                         if ($_POST['password'] != $riadok['password']) {
                             echo '<div class="alert alert-warning" role="alert">Nesprávne heslo!!!</div>';
                         } else {
-                            echo '<div class="alert alert-warning" role="alert">Fungujem?</div>';
                             $select->close();
                             $_SESSION['user'] = $_POST['login'];
-                            // header('Location: index.php');
-                            // exit();
+                            header('Location: index.php');
+                            exit();
                         }
                     }
                 }
