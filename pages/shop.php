@@ -12,6 +12,11 @@ function replace_char($str)
     return $str;
 }
 
+if (isset($_POST['addCart'])) {
+    $_SESSION['cart'][] = $_POST['addCart'];
+}
+
+
 ?>
 <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
@@ -38,7 +43,7 @@ function replace_char($str)
                         Year of publication: <small class="text-muted">' . $row['year_of_publication'] . '</small>
                         </p>
                         </div>
-                        <div class="text-center my-2 block mx-auto"><a href="#" class="btn btn-primary btn-lg px-5">Pridať do košíka</a></div>
+                        <div class="text-center my-2 block mx-auto"><form action="./?id=shop" method="post"><button type="submit" name="addCart" value=' . $row['id'] . ' class="btn btn-primary btn-lg px-5">Pridať do košíka</button></form></div>
                     </div>
                 </div></div>';
             }

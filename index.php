@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pages = array('uvod', 'drama', 'komedia', 'shop', 'kontakt');
+$pages = array('uvod', 'drama', 'komedia', 'shop', 'kontakt', 'cart');
 $show = 'uvod';
 
 if (isset($_GET['id']) && in_array($_GET['id'], $pages)) 

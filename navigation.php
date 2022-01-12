@@ -9,6 +9,7 @@ function showNav($choose)
     $titles['drama'] = 'Drama';
     $titles['komedia'] = 'Comedy';
     $titles['shop'] = 'Shop';
+    $titles['cart'] = 'Cart';
 
     if (isset($_SESSION['user'])) {
         $titles['kontakt'] = 'Contacts';
