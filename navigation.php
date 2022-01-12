@@ -1,20 +1,22 @@
 <?php
 
-function showNavi($choose)
+session_start();
+
+function showNav($choose)
 {
     $titles = array();
     $titles['uvod'] = 'Domov';
     $titles['drama'] = 'Dráma';
     $titles['komedia'] = 'Komédia';
+    $titles['shop'] = 'Shop';
 
     if (isset($_SESSION['user'])) {
         $titles['kontakt'] = 'Kontakt';
-        $titles['shop'] = 'Shop';
     }
 
     foreach ($titles as $id => $title) {
         if ($choose == $id) {
-            echo "<li class='list-group bg-light active'>";
+            echo "<li class='list-group text-body bg-light active '>";
         } else {
             echo "<li>";
         }
